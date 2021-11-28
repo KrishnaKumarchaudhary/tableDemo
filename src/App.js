@@ -1,5 +1,5 @@
 import "./App.css";
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import sidebardata from "./data";
 import tableData from "./tabledata";
 import { FaUserCircle } from "react-icons/fa";
@@ -17,20 +17,16 @@ function App() {
 
   var total_length = Math.ceil(tableData.length / 10);
   var pageno = Array.from(Array(total_length).keys());
-  console.log(currentPage);
+
   useEffect(() => {
-    if (
-      currentPage <== 0 &&
-      tableData.length <== 10 &&
-      tableData.length <== 10 
-    ) {
-      setcurrentData(tableData.slice(0, tableData.length <== 10));
-    } else if (currentPage > 0 && currentPage <== pageno.length) {
+    if (currentPage <= 0 && tableData.length <= 10 && tableData.length <= 10) {
+      setcurrentData(tableData.slice(0, tableData.length <= 10));
+    } else if (currentPage > 0 && currentPage <= pageno.length) {
       setcurrentData(tableData.slice(currentPage * 10 - 10, currentPage * 10));
     } else if (currentPage > pageno.length) {
       setCurrentPage(pageno.length);
     }
-  }, [currentPage]);
+  }, [currentPage, pageno.length]);
   return (
     <>
       <div className="wrapper">
@@ -38,7 +34,7 @@ function App() {
           <div className="logo">
             <h1 className="logo-text">LOGO</h1>
             <ul>
-              {sidebardata.map((item, index) => {
+              {sidebardata.map((item) => {
                 const { icon, label, arrow } = item;
                 return (
                   <>
@@ -93,7 +89,7 @@ function App() {
               backgroundColor: "#fff",
             }}
           >
-            <table cellSpacing="20" cellSpacing="20">
+            <table cellSpacing="20">
               <thead
                 style={{ boxShadow: "0px 1px gray", PaddingBottom: "1rem" }}
               >
