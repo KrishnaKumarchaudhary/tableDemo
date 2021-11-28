@@ -20,12 +20,12 @@ function App() {
   console.log(currentPage);
   useEffect(() => {
     if (
-      currentPage <= 0 &&
-      tableData.length <= 10 &&
-      tableData.length <= 10 > 10
+      currentPage <== 0 &&
+      tableData.length <== 10 &&
+      tableData.length <== 10 
     ) {
-      setcurrentData(tableData.slice(0, tableData.length <= 10));
-    } else if (currentPage > 0 && currentPage <= pageno.length) {
+      setcurrentData(tableData.slice(0, tableData.length <== 10));
+    } else if (currentPage > 0 && currentPage <== pageno.length) {
       setcurrentData(tableData.slice(currentPage * 10 - 10, currentPage * 10));
     } else if (currentPage > pageno.length) {
       setCurrentPage(pageno.length);
