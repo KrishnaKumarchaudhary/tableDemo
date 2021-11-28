@@ -8,7 +8,6 @@ import { RiDonutChartFill } from "react-icons/ri";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { GrDriveCage } from "react-icons/gr";
 
-import React from "react";
 
 const sidebardata = [
   {
